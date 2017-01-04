@@ -1,0 +1,60 @@
+<div class="form-group">
+<%= simple_form_for(@post) do |f| %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+    <div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <label><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</label>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+  <div class="form-group">
+
+
+ <div class ="row">
+      <div class="col-xs-1">
+    <label for="title">Title</label>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+    <%= f.text_area :title, :size => "70%x1%" %>
+    </div>
+    </div>
+
+  <div class="row">
+  <div class="col-xs-1">
+    <label for="body">Post</label>
+    </div>
+    </div>
+    <div class="row">
+  <div class="col-xs-6">
+  <%= f.text_area :body, :size => "70%x16%" %>
+  </div>
+</div>
+
+<div class ="row">
+      <div class="col-xs-1">
+    <button><%= link_to 'Back', posts_path %></
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+     <%= f.submit %>
+    </div>
+    </div>
+
+
+  </div>
+
+  </div>
+  </div>
+<% end %>

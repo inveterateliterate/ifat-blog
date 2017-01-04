@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ifat's Blog</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/sandstone-bootswatch-theme.css">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900" rel="stylesheet">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="header">
+  		<div class="menu">
+  			<ul class="pull-right">
+  			<% if logged_in? %>
+  			<li>
+                <%= link_to 'New', new_post_path %>
+				
+				</li>
+				<li>
+				<%= link_to "Logout", logout_path(current_user), :method => :delete %></li>
+				<%end%>
+				<li><a href="/posts">Home</a></li>
+				<li><a href="<%= "#" %>">About</a></li>
+			</ul>
+		</div>
+				<div class="banner">
+			
+		</div>
+  	</div>
+
+  	<hr/>
+
+  
+    <%= yield %>
+  </body>
+</html>
