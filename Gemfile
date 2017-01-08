@@ -33,6 +33,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 #gem 'ckeditor', '~> 4.1'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'paperclip'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

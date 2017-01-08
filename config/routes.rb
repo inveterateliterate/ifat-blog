@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
- # mount Ckeditor::Engine => '/ckeditor'
+  mount Ckeditor::Engine => '/ckeditor'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'posts#index'
   get "posts/title-:title" => "posts#show_by_title", as: "post_by_title"

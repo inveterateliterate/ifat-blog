@@ -37,7 +37,7 @@
     </div>
     <div class="row">
   <div class="col-xs-6">
-  <%= f.text_area :body, :size => "70%x16%" %>
+  <%= f.cktext_area :body, :size => "70%x16%", as: :ckeditor, input_html: {ckeditor: {toolbar: 'FULL'}} %>
   </div>
 </div>
 
