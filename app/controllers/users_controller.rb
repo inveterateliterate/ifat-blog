@@ -29,10 +29,10 @@ class UsersController < ApplicationController
     @user = User.authenticate(params[:name], params[:password])
     if @user.nil?
       @error = "Your name or password is incorrect. Please try again."
-      render :login      
+      render :login
     else
-      session[:user_id] = @user.id    
-      redirect_to user_path(@user)
+      session[:user_id] = @user.id
+      redirect_to root_path
     end
   end
 

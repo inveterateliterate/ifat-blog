@@ -66,7 +66,7 @@ class PostsController < ApplicationController
     #  end
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to posts_url, notice: 'Post was successfully updated.' }
+        format.html { redirect_to post_url(@post), notice: 'Post was successfully updated.' }
         format.json { render :index, status: :ok, location: @post }
       else
         format.html { render :edit }

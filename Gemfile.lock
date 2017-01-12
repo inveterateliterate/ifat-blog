@@ -49,11 +49,13 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.6.1)
       execjs
+    bcrypt (3.1.11)
     bcrypt (3.1.11-x64-mingw32)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.2)
+    byebug (9.0.6)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -99,6 +101,8 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     nio4r (1.2.1)
+    nokogiri (1.7.0)
+      mini_portile2 (~> 2.1.0)
     nokogiri (1.7.0-x64-mingw32)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
@@ -108,6 +112,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.19.0)
     pg (0.19.0-x64-mingw32)
     puma (3.6.2)
     rack (2.0.1)
@@ -210,6 +215,7 @@ GEM
     websocket-extensions (0.1.2)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
@@ -241,4 +247,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.5
+   1.13.7
